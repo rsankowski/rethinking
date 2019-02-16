@@ -1,3 +1,4 @@
+library(rethinking)
 ## R code 0.1
 print( "All models are wrong, but some are useful." )
 
@@ -83,8 +84,8 @@ precis( globe.qa )
 
 ## R code 2.7
 # analytical calculation
-w <- 6
-n <- 9
+w <- 6*4
+n <- 9*4
 curve( dbeta( x , w+1 , n-w+1 ) , from=0 , to=1 )
 # quadratic approximation
 curve( dnorm( x , 0.67 , 0.16 ) , lty=2 , add=TRUE )
